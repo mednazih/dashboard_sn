@@ -1,14 +1,12 @@
 // components/Header.jsx
 
-import React from 'react';
+import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex w-full justify-center items-center p-2 bg-blue-900">
-      
-      
+    <header className=" sticky z-40 top-0 flex w-full justify-center items-center p-2 bg-blue-900">
       <div className="flex items-center w-96 bg-white rounded-md max-w-md ">
-      <svg
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -28,7 +26,6 @@ const Header = () => {
           className="border-none outline-none p-2 text-black"
         />
       </div>
-      
     </header>
   );
 };

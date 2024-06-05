@@ -3,37 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { MdSpaceDashboard } from "react-icons/md";
-import { icon } from "leaflet";
-
-const sidebar__items = [
-  {
-    name: "well",
-    href: "/",
-    icon: (
-      <Image
-        src="/icon/logo.png"
-        width={20}
-        height={20}
-        className="sidebar__logo"
-        alt="logo"
-      />
-    ),
-  },
-  {
-    name: "map",
-    href: "/map",
-    icon: (
-      <Image
-        src="/icon/logo.png"
-        width={20}
-        height={20}
-        className="sidebar__logo"
-        alt="logo"
-      />
-    ),
-  },
-];
 
 function SSbar() {
   const [isCollapsed, setisCollapsed] = useState(false);
@@ -42,7 +11,7 @@ function SSbar() {
   };
 
   return (
-    <div className=" top-0  left-0 z-40 h-screen sticky">
+    <div className=" top-0  left-0 z-50 h-screen sticky">
       <div className="aboslute left-0 top-4 ">
         <button className="btn" onClick={toggleSidebar}>
           <MdKeyboardArrowLeft />
