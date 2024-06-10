@@ -48,7 +48,9 @@
       background-color: #eee;
       font-family: "Roboto", sans-serif;
     }
-    
+    .leaflet-default-icon-path {
+      background-image: url(https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png);
+  }
     .layout {
       display: flex;
       height: 100vh;

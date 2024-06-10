@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className=" sticky z-40 top-0 flex w-full justify-center items-center p-2 bg-blue-900">
+    <header className="  z-40 right-0 fixed top-0 flex w-full justify-center items-center p-2 bg-blue-900">
       <div className="flex items-center w-96 bg-white rounded-md max-w-md ">
         <svg
           xmlns="http://www.w3.org/2000/svg"

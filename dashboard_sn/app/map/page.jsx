@@ -1,11 +1,27 @@
 "use client";
 import React from "react";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+
+// Import the default icon images
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+// Fix the default icon paths
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
+
 
 function page() {
   return (
-    <div className="w-full h-screen z-10">
+    <div className="w-full fixed  py-14  top-0 h-screen z-10">
       <MapContainer
         className="w-full z-10 h-screen "
         center={[51.505, -0.09]}
@@ -17,7 +33,6 @@ function page() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={[51.505, -0.09]}>
-          x
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>

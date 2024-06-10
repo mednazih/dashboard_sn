@@ -10,7 +10,7 @@ const Well = () => {
     setopenIndex(index);
   };
   return (
-    <div className="flex flex-col gap-8">
+    <div className="relative py-12 flex flex-col gap-8">
       <div className="grid pt-5 px-4 grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
         <Theinfo className="p-2" title="well_id" value="# id">
           <Image
